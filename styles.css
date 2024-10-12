@@ -39,20 +39,20 @@ html, body {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 900%;
     margin: 0;
     margin-bottom: 150px; /* Puedes ajustar este valor */
 }
 
 .number-box {
-    font-size: 10rem;
+    font-size: 1500%;
     font-weight: bold;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
     align-items: center;
     color: white;
-    animation: palpitar 1s infinite; /* Activa la animación de palpitación constante */
+    animation: palpitar 2s infinite; /* Activa la animación de palpitación constante */
 }
 
 /* Animación de palpitación */
