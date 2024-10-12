@@ -1,5 +1,5 @@
 let currentNumber = 1;
-const maxNumber = 100; // Cambia este valor para definir el número máximo
+const maxNumber = 400; // Cambia este valor para definir el número máximo
 
 // Selecciona los elementos
 const numberElement = document.getElementById('number');
@@ -30,3 +30,9 @@ document.addEventListener('keydown', (event) => {
 
 // Actualiza el carrusel con el número inicial
 updateCarousel();
+
+// Código para asignar la imagen del logo
+document.addEventListener("DOMContentLoaded", function() {
+    const logoElement = document.getElementById('logo');
+    logoElement.src = '/logo_mana1.png'; // Asigna la fuente de la imagen
+});
