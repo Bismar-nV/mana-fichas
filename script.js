@@ -32,7 +32,7 @@ document.addEventListener('keydown', (event) => {
 updateCarousel();
 
 // Código para asignar la imagen del logo
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     const logoElement = document.getElementById('logo');
     logoElement.src = '/logo_mana1.png'; // Asigna la fuente de la imagen
-});
+});*/
