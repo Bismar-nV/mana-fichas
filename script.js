@@ -1,6 +1,6 @@
 let currentNumber = 1;
-const maxNumber = 100; // Cambia este valor para definir el número máximo
-const audio = new Audio('/recursos/audio.mp3'); // Carga el archivo de audio
+const maxNumber = 400; // Cambia este valor para definir el número máximo
+const audio = new Audio('audio.mp3'); // Carga el archivo de audio
 
 // Selecciona los elementos
 const numberElement = document.getElementById('number');
@@ -27,6 +27,8 @@ document.addEventListener('keydown', (event) => {
             currentNumber = maxNumber; // Regresa al máximo cuando llegue a 1
         }
         updateCarousel();
+    } else if (event.key === ' ') { // Detecta la tecla Espacio
+        audio.play(); // Solo reproduce el audio sin cambiar el número
     }
 });
 
