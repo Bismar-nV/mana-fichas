@@ -1,6 +1,6 @@
 let currentNumber = 1;
 const maxNumber = 400; // Cambia este valor para definir el número máximo
-const audio = new Audio('audio.mp3'); // Carga el archivo de audio
+const audio = new Audio('/audio.mp3'); // Carga el archivo de audio
 
 // Selecciona los elementos
 const numberElement = document.getElementById('number');
