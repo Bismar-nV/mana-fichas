@@ -4,6 +4,8 @@ const audio = new Audio('audio.mp3'); // Carga el archivo de audio
 
 // Selecciona los elementos
 const numberElement = document.getElementById('number');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
 
 // Función para actualizar el número
 function updateCarousel() {
@@ -14,29 +16,37 @@ function updateCarousel() {
 // Evento para cambiar el número con las teclas de flecha
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
-        if (currentNumber < maxNumber) {
-            currentNumber++;
-        } else {
-            currentNumber = 1; // Reinicia a 1 cuando llegue al máximo
-        }
-        updateCarousel();
+        nextNumber();
     } else if (event.key === 'ArrowLeft') {
-        if (currentNumber > 1) {
-            currentNumber--;
-        } else {
-            currentNumber = maxNumber; // Regresa al máximo cuando llegue a 1
-        }
-        updateCarousel();
+        prevNumber();
     } else if (event.key === ' ') { // Detecta la tecla Espacio
         audio.play(); // Solo reproduce el audio sin cambiar el número
     }
 });
 
+// Función para incrementar el número
+function nextNumber() {
+    if (currentNumber < maxNumber) {
+        currentNumber++;
+    } else {
+        currentNumber = 1; // Reinicia a 1 cuando llegue al máximo
+    }
+    updateCarousel();
+}
+
+// Función para disminuir el número
+function prevNumber() {
+    if (currentNumber > 1) {
+        currentNumber--;
+    } else {
+        currentNumber = maxNumber; // Regresa al máximo cuando llegue a 1
+    }
+    updateCarousel();
+}
+
+// Añade eventos a los botones de flecha
+nextButton.addEventListener('click', nextNumber);
+prevButton.addEventListener('click', prevNumber);
+
 // Actualiza el carrusel con el número inicial
 updateCarousel();
-
-// Código para asignar la imagen del logo
-/*document.addEventListener("DOMContentLoaded", function() {
-    const logoElement = document.getElementById('logo');
-    logoElement.src = '/logo_mana1.png'; // Asigna la fuente de la imagen
-});*/
