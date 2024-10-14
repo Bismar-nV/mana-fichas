@@ -1,5 +1,6 @@
 let currentNumber = 1;
-const maxNumber = 400; // Cambia este valor para definir el número máximo
+const maxNumber = 100; // Cambia este valor para definir el número máximo
+const audio = new Audio('/recursos/audio.mp3'); // Carga el archivo de audio
 
 // Selecciona los elementos
 const numberElement = document.getElementById('number');
@@ -7,6 +8,7 @@ const numberElement = document.getElementById('number');
 // Función para actualizar el número
 function updateCarousel() {
     numberElement.textContent = currentNumber;
+    audio.play(); // Reproduce el audio cada vez que se actualiza el número
 }
 
 // Evento para cambiar el número con las teclas de flecha
